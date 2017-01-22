@@ -7,55 +7,41 @@
 //  Constants which is used for the pulse animation
 //
 
+// MARK:- Enums
+
+/// Enum which defines the different type of pulse animation
+///
+/// - radar: Single wave like animation, one at a time
+/// - continous: Pulse expands and shrinks continuously
+/// - multiRadar: Multiple waves continuously displayed
 enum MMPPulseType
 {
     case radar
     case continous
+    case multiRadar
 }
 
-extension MMPPulseType
-{
-    func getPulseFrequency() -> Float
-    {
-        var frequency : Float = 1.0
-        
-        switch self
-        {
-            case .radar:     frequency = 1.6
-            case .continous: frequency = 1.2
-        }
-        return frequency
-    }
-    
-    func getPulseScaleFactor() -> Float
-    {
-        var scaleFactor : Float = 1.0
-        
-        switch self
-        {
-        case .radar:     scaleFactor = 1.0
-        case .continous: scaleFactor = 1.3
-        }
-        return scaleFactor
-    }
-}
+// MARK:- Structs
 
+/// Defines the constants used in the library
 struct MMPPulseConstants
 {
+    // MARK:- Layer names
     struct Layers
     {
         static let outerLayer = "MMPOuterLayer"
     }
     
+    // MARK:- Animation keypaths
     struct Animations
     {
-        static let scale   = "transform.scale"
+        static let scale   = "transform.scale.xy"
         static let opacity = "opacity"
     }
     
+    // MARK: Animation keys
     struct AnimKeys
     {
-        static let pulseAnim = "MMP_Pulse"
-        static let fadeAnim  = "MMP_Fade"
+        static let pulseAnimation = "MMP_Pulse_Animation"
     }
 }
