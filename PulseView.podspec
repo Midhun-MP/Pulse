@@ -1,5 +1,5 @@
 #
-#  Be sure to run `pod spec lint MMPPulseView.podspec' to ensure this is a
+#  Be sure to run `pod spec lint PulseView.podspec' to ensure this is a
 #  valid spec and to remove all comments including this before submitting the spec.
 #
 #  To learn more about Podspec attributes see http://docs.cocoapods.org/specification.html
@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "MMPPulseView"
+  s.name         = "PulseView"
   s.version      = "0.0.3"
   s.summary      = "An extension to the UIView for showing pulse like animation"
 
@@ -80,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/Midhun-MP/Pulse.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/Midhun-MP/Pulse.git", :tag => #{s.version} }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -134,6 +134,5 @@ Pod::Spec.new do |s|
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
-  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '3' }
 
 end
