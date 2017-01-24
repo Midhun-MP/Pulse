@@ -10,7 +10,7 @@
 import UIKit
 
 // MARK:- Pulse Functions
-extension UIView
+public extension UIView
 {
     
     /// Function for starting the pulse animation
